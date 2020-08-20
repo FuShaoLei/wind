@@ -1,17 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Layout from '../components/layout.vue'
 import Index from '../components/index.vue'
-import About from '../components/page/about.vue'
+import Post from '../components/post.vue'
+import Login from '../components/admin/login.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+  const routes = [
   {
     path: '/',
-    component: Index,
-    children: [
-      { path: '/about', component: About }
+    component: Layout,
+    children:[
+      {path:'/',component: Index},
+      {path: '/blog/:blogId',component: Post}
     ]
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ]
 

@@ -1,2 +1,16 @@
 # wind
-springboot+mybatis+vue+elementUI 打造独一无二的Blog系统
+一款基于springboot vue 的前后端分离博客
+
+## 预期功能
+
+### 博客页面
+
+- 展示博客
+- toc
+- 评论（感觉好难这里）
+- wiki功能
+
+### 后台管理页面
+
+- 创建博客
+- 创建草稿
