@@ -33,4 +33,12 @@ public class Blog {
         this.title = title;
         this.content = content;
     }
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }

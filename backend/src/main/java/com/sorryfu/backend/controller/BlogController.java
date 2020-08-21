@@ -29,4 +29,14 @@ public class BlogController {
         System.out.println("id为"+id+" 的博客的数据是 "+str);
         return str;
     }
+
+    @RequestMapping("/blog/edit")
+    public String saveBlog(@RequestBody Blog blog){
+        String flag = "error";
+        System.out.println("获取到的博客内容是 "+blog.toString());
+        if(blogDao.saveBlog(blog) == 1){
+            flag = "save";
+        }
+        return flag;
+    }
 }

@@ -8,4 +8,7 @@
     <select id="getBlogById" resultType="com.sorryfu.backend.entity.Blog">
         select * from blog where id = #{id}
     </select>
+    <insert id="saveBlog" useGeneratedKeys="true" keyProperty="id">
+        insert into blog(title,content) values (#{title},#{content})
+    </insert>
 </mapper>

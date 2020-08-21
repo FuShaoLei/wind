@@ -7,7 +7,7 @@
               </div>
               <div class="menu">
                 <div><router-link to='/'>Blog</router-link></div>
-                <div><router-link to='/login'>Admin</router-link></div>
+                <div><router-link to='/login'>Login</router-link></div>
               </div>
             </div>
             <div class="body">

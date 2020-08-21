@@ -11,5 +11,7 @@ public interface BlogDao {
     public List<Blog> getBlog();
     //根据id获取blog
     public Blog getBlogById(int id);
+    //创建博客
+    public int saveBlog(Blog blog);
 
 }
