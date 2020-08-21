@@ -29,15 +29,18 @@ public class Blog {
         this.content = content;
     }
 
-    public Blog(String title, String content) {
+    public Blog(int id, String title, String content) {
+        this.id = id;
         this.title = title;
         this.content = content;
     }
 
+
     @Override
     public String toString() {
         return "Blog{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 '}';
     }

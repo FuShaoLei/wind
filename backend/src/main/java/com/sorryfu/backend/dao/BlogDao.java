@@ -11,7 +11,8 @@ public interface BlogDao {
     public List<Blog> getBlog();
     //根据id获取blog
     public Blog getBlogById(int id);
-    //创建博客
+    //创建或修改博客
     public int saveBlog(Blog blog);
-
+    //删除博客
+    public int deleteBlog(int id);
 }

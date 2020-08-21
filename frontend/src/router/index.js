@@ -6,6 +6,8 @@ import Post from '../components/post.vue'
 import Login from '../components/admin/login.vue'
 import Backhome from '../components/admin/backhome.vue'
 import Edit from '../components/admin/edit.vue'
+import Bkindex from '../components/admin/bkindex.vue'
+import Allblogs from '../components/admin/allblogs.vue'
 
 Vue.use(VueRouter)
 
@@ -26,7 +28,10 @@ Vue.use(VueRouter)
     path: '/backhome',
     component: Backhome,
     children:[
-      {path: '/backhome/edit',component: Edit}
+      {path: '/backhome',component: Bkindex},
+      {path: '/backhome/allblogs',component: Allblogs},
+      {path: '/backhome/edit',component: Edit},
+      {path: '/backhome/edit/:blogId',component: Edit}
     ]
   }
 ]

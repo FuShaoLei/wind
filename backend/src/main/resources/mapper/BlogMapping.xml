@@ -9,6 +9,14 @@
         select * from blog where id = #{id}
     </select>
     <insert id="saveBlog" useGeneratedKeys="true" keyProperty="id">
-        insert into blog(title,content) values (#{title},#{content})
+        <if test="id == 0">
+            insert into blog(title,content) values (#{title},#{content})
+        </if>
+        <if test="id !=0">
+            update blog set title=#{title},content=#{content} where id=#{id}
+        </if>
     </insert>
+    <delete id="deleteBlog">
+        delete from blog where id = #{id}
+    </delete>
 </mapper>

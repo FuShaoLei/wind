@@ -9,7 +9,7 @@
                   <mavon-editor v-model="blogForm.content"></mavon-editor>
               </el-form-item>
               <el-form-item >
-                  <el-button @click="createBlog">立即创建</el-button>
+                  <el-button @click="createBlog">Save</el-button>
               </el-form-item>
             </el-form>
         </div>
@@ -20,18 +20,34 @@ export default {
     data(){
         return {
             blogForm: {
+                id: 0,
                 title: "",
                 content: ""
             }
         }
     },
+    created(){
+        if(this.$route.params.blogId!==undefined){
+            const blogId = this.$route.params.blogId;
+            this.blogForm.id=blogId;
+            console.log("准备修改的博客id是"+blogId);
+            this.getBlog();
+        }
+    },
     methods:{
+        getBlog:async function(){
+            // console.log("经由create获得的博客id是 "+this.blog.id);
+            const {data:res} = await this.$http.get("blog/"+this.blogForm.id);
+            this.blogForm = res;
+
+        },
         createBlog:async function(){
             const{data:re} = await this.$http.post("blog/edit",this.blogForm);
             if(re == "save"){
-                this.$message.success("创建博客成功\(0^◇^0)/");
+                this.$message.success("创建/更新博客成功\(0^◇^0)/");
+                this.$router.go(-1);
             }else {
-                this.$message.error("创建博客失败(ノ｀Д)ノ");
+                this.$message.error("创建/更新博客失败(ノ｀Д)ノ");
             }
         }
     }
