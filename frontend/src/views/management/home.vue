@@ -1,21 +1,16 @@
 <template>
     <el-container class="backhome-outer">
-        <el-aside width="200px">
-            <el-menu>
-                <router-link :to="{path: '/backhome'} ">
+        <el-aside width="200px" >
+            <el-menu
+            default-active="1">
+                <router-link :to="{name: 'Posts'} ">
                 <el-menu-item index="1">
-                    <i class="el-icon-s-home"></i>
-                    首页
-                </el-menu-item>
-                </router-link>
-                <router-link :to="{path: '/backhome/allblogs'} ">
-                <el-menu-item index="2">
                     <i class="el-icon-s-management"></i>
                     文章管理
                 </el-menu-item>
                 </router-link>
                 <router-link :to="{path: '/'} ">
-                <el-menu-item index="3">
+                <el-menu-item index="2">
                     <i class="el-icon-caret-left"></i>
                     回到博客页
                 </el-menu-item>

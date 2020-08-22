@@ -12,7 +12,7 @@
       </el-table-column>
       <el-table-column>
           <template slot="header" slot-scope="scope">
-              <router-link :to="{path: './edit'}"><el-button type="success" round>Create</el-button></router-link>
+              <router-link :to="{name: 'Edit'}"><el-button type="success" round>Create</el-button></router-link>
           </template>
           <template slot-scope="scope">
               <router-link :to="{path: './edit/'+scope.row.id}"><el-button type="primary"  icon="el-icon-edit" circle @click="handleEdit(scope.row.id)"></el-button></router-link>

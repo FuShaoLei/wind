@@ -1,9 +1,4 @@
 //============各种设定============
-//字体
-@font-face {
-  font-family: Gothic;
-  src: url(https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/font/GOTHIC.TTF);
-}
 //layout
 $layout-max-width = 1000px
 $post-max-width = 800px
@@ -11,53 +6,17 @@ $post-max-width = 800px
 //color
 $color-text-main = #333333
 $color-text-secondary = #A8B2BA
+$color-background = #ffffff
 //=============全局设定============
 html
   font-size 17px
   height 100%
   width: 100%
+  color: $color-text-main
 a
     text-decoration none
-
-html,body,#app
-  height 100%
-  padding 0
-  margin: 0
-//=============layout=============
-.outer
-    display flex
-    justify-content center
-.inner
-    width $layout-max-width
-    font-family: Gothic
-//============header===============
-.header
-  display flex
-  justify-content space-between
-  line-height 5rem
-  a
-    color $color-text-secondary
-    transition all .3s
-    &:hover
-      color $color-text-main
-.logo
-  font-size 1.7rem
-.menu
-  display flex
-  div
-    margin-left 25px
-
-//===========index===============
-.post-outer
-    display: flex
-    justify-content: center
-.post-inner
-    width: $post-max-width
-    margin-top: 20px
-.index-post-item
-    margin-top: 30px
-.index-post-name
-    font-size: 1.5rem
+p
+  letter-spacing: 0.05rem
 
 //============login=================
 .login-outer
@@ -71,14 +30,15 @@ html,body,#app
   border-radius: 10px
   box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 8px 8px
 
-//=============footer===============
-.footer
-  line-height 5rem
-  color $color-text-secondary
-  a
-    color $color-text-secondary
-    transition: all .3s
-    &:hover
-        color $color-text-main
 
-
+//============post=====================
+.post-title
+    font-size: 2.5rem
+    font-weight: 1000
+    text-align: center
+    margin: 100px 0px
+img 
+    width auto
+    max-width 100%
+    margin 10px auto
+    display block

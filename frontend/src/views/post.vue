@@ -1,12 +1,20 @@
 <template>
-    <div>
-        <div class="post-title">
-            {{ blog.title }}
-        </div>
-        <div class="post-content" v-html="blog.content"></div>
-    </div>
+    <el-card shadow="always" class="m_post">
+        <div class="post-title"> {{ blog.title }} </div>
+        <div  class="markdown-body" v-html="blog.content" v-highlight></div>
+    </el-card>
 </template>
 <script>
+    // <div class="post-outer">
+    //     <div class="post-inner">
+    //     <div class="post-title">
+    //         {{ blog.title }}
+    //     </div>
+    //     <div class="post-content" v-html="blog.content"></div>
+    //     </div>
+    // </div>
+import 'github-markdown-css'
+
 export default {
     data(){
         return {
@@ -41,3 +49,7 @@ export default {
     }
 }
 </script>
+<style lang="stylus" scoped>
+.m_post
+    width 700px
+</style>
