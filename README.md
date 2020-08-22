@@ -1,16 +1,28 @@
 # wind
-一款基于springboot vue 的前后端分离博客
+一款超简单的springboot+vue创建的博客系统
 
-## 预期功能
+## 截图
 
-### 博客页面
+- 首页
 
-- 展示博客
-- toc
-- 评论（感觉好难这里）
-- wiki功能
+  ![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200823015754.png)
 
-### 后台管理页面
+- 博客页面
 
-- 创建博客
-- 创建草稿
+  ![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200823015912.png)
+
+- 后台登录页面
+
+  ![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200823020012.png)
+
+- 后台管理页面
+
+  ![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200823020043.png)
+
+- 创建博客页面
+
+  ![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200823020122.png)
+
+- 编辑博客页面
+
+  ![](https://cdn.jsdelivr.net/gh/fushaolei/img2/20200823020152.png)
