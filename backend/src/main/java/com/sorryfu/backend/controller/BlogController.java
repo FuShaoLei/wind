@@ -18,7 +18,7 @@ public class BlogController {
     public String getBlogList(){
         List<Blog> blogList=blogDao.getBlog();
         String str=JSON.toJSONString(blogList);
-        System.out.println("获取到的博客是 "+str);
+//        System.out.println("获取到的博客是 "+str);
         return str;
     }
 
@@ -26,7 +26,7 @@ public class BlogController {
     public String getBlogById(@PathVariable(name = "id")int id){
         Blog blog=blogDao.getBlogById(id);
         String str=JSON.toJSONString(blog);
-        System.out.println("id为"+id+" 的博客的数据是 "+str);
+//        System.out.println("id为"+id+" 的博客的数据是 "+str);
         return str;
     }
 
@@ -41,14 +41,14 @@ public class BlogController {
     public String saveBlog(@RequestBody Blog blog){
         String flag = "error";
         if(blog.getId()==0){
-            System.out.println("holy fuck 这个是要新增的博客");
-            System.out.println("新增博客的内容是 "+blog.toString());
+//            System.out.println("holy fuck 这个是要新增的博客");
+//            System.out.println("新增博客的内容是 "+blog.toString());
             if(blogDao.saveBlog(blog) == 1){
                 flag = "save";
             }
         }else if(blog.getId()!=0){
-            System.out.println("holy shit 这个是要修改的博客");
-            System.out.println("要修改博客的内容是 "+blog.toString());
+//            System.out.println("holy shit 这个是要修改的博客");
+//            System.out.println("要修改博客的内容是 "+blog.toString());
             if(blogDao.saveBlog(blog) == 1){
                 flag = "save";
             }
@@ -59,7 +59,7 @@ public class BlogController {
     @GetMapping("/delete/{id}")
     public String deleteBlog(@PathVariable(name = "id")int id){
         String flag = "error";
-        System.out.println("准备要删除的id是 "+id);
+//        System.out.println("准备要删除的id是 "+id);
         if(blogDao.deleteBlog(id)==1){
             flag = "done";
         }

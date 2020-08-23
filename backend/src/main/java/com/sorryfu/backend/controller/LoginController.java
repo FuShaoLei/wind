@@ -18,7 +18,7 @@ public class LoginController {
         String flag = "error";
         User u=userDao.getUserByMessage(user.getUsername(),user.getPassword());
         if (u!=null){
-            System.out.println("获取到的数据是 "+u);
+//            System.out.println("获取到的数据是 "+u);
             flag = "ok";
         }
         return flag;

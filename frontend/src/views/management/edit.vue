@@ -30,7 +30,7 @@ export default {
         if(this.$route.params.blogId!==undefined){
             const blogId = this.$route.params.blogId;
             this.blogForm.id=blogId;
-            console.log("准备修改的博客id是"+blogId);
+            // console.log("准备修改的博客id是"+blogId);
             this.getBlog();
         }
     },
@@ -44,10 +44,10 @@ export default {
         createBlog:async function(){
             const{data:re} = await this.$http.post("blog/edit",this.blogForm);
             if(re == "save"){
-                this.$message.success("创建/更新博客成功\(0^◇^0)/");
+                this.$message.success("save success (￣▽￣)");
                 this.$router.go(-1);
             }else {
-                this.$message.error("创建/更新博客失败(ノ｀Д)ノ");
+                this.$message.error("save fail _(:з)∠)_");
             }
         }
     }

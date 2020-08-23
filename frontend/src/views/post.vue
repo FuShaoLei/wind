@@ -5,14 +5,6 @@
     </el-card>
 </template>
 <script>
-    // <div class="post-outer">
-    //     <div class="post-inner">
-    //     <div class="post-title">
-    //         {{ blog.title }}
-    //     </div>
-    //     <div class="post-content" v-html="blog.content"></div>
-    //     </div>
-    // </div>
 import 'github-markdown-css'
 
 export default {
@@ -41,6 +33,7 @@ export default {
             // console.log("输出"+this.blog.title);
             // console.log("输出"+this.blog.content);
 
+            //将md格式的数据转换成html的格式
             var MarkdownIt = require("markdown-it");
             var md = new MarkdownIt();
             var result = md.render(this.blog.content);

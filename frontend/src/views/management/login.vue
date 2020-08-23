@@ -29,7 +29,6 @@ export default {
         login:async function(){
             const{data:re} = await this.$http.post("login",this.loginForm);
             if(re == "ok"){
-                // window.sessionStorage.setItem("user",this.loginForm);//存储user对象
                 this.$message.success("登录成功(´▽`ʃ♡ƪ)");
                 this.$router.push({name: 'Home'});
             }else{

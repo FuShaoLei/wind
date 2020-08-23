@@ -11,29 +11,6 @@
       </el-main>
     </el-container>
 </template>
-<script>
-export default {
-    //   <div class="outer">
-    //     <div class="inner">
-    //         <div class="header">
-    //           <div class="logo">
-    //             Sorryfu
-    //           </div>
-    //           <div class="menu">
-    //             <div><router-link to='/'>Blog</router-link></div>
-    //             <div><router-link :to="{name: 'Login'}">Login</router-link></div>
-    //           </div>
-    //         </div>
-    //         <div class="body">
-    //           <router-view></router-view>
-    //         </div>
-    //         <div class="footer">
-    //           Code by <a href="https://github.com/FuShaoLei">Sorryfu</a>
-    //         </div>
-    //     </div>
-    // </div>
-}
-</script>
 <style lang="stylus" scoped>
 .el-header, .el-footer
   display flex

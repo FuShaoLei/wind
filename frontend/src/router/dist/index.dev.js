@@ -65,9 +65,6 @@ var routes = [{
 }];
 var router = new _vueRouter["default"]({
   routes: routes
-}); // router.beforeEach((to,from,next)=>{
-//   if(to.path == '/backhome') return next();
-// })
-
+});
 var _default = router;
 exports["default"] = _default;
